@@ -9,9 +9,18 @@ public class Fibonacci {
 	 */
 
 	public static int recursive(int n) {
+		int first = 1;
+		int second = 1;
+		int count = 1;
+			return recursiveHelper(n, first, second, count); // FIXME
 		
-			return 0; // FIXME
-		
+	}
+	public static int recursiveHelper(int n, int first, int second, int count){
+		if (count == n){
+			return first;
+		}
+		return recursiveHelper(n, second, first + second, count+1);
+
 	}
 
 	/**

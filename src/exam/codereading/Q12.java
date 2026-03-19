@@ -16,6 +16,6 @@ public class Q12 {
 		//Use the substitution method to show the computation of
 		//the following:
 		
-		foo(3);
+		System.out.println(foo(3));
 	}
 }

@@ -24,7 +24,17 @@ public class Q08 {
 	 */
 
 	public static int[] countValues (int[][] a, int findMe ) {
-		return new int[0]; //fix me
+		int[] newArray = new int[a[0].length];
+		for (int c = 0; c<a[0].length; c++){
+			int count = 0;
+			for (int r = 0; r<a.length; r++){
+				if (a[r][c]==findMe){
+					count++;
+				}
+			}
+			newArray[c]=count;
+		}
+		return newArray; //fix me
 	}
 
 	public static void main ( String[] args ) {
@@ -40,3 +50,26 @@ public class Q08 {
 	}
 
 }
+/*public static int[] countOnesPerColumn(int[][] arr) {
+    int[] counts = new int[arr[0].length];
+    countHelper(arr, counts, 0, 0);
+    return counts;
+}
+
+public static void countHelper(int[][] arr, int[] counts, int row, int col) {
+
+    if (col >= arr[0].length) {
+        return; // finished all columns
+    }
+
+    if (row >= arr.length) {
+        countHelper(arr, counts, 0, col + 1); // move to next column
+        return;
+    }
+
+    if (arr[row][col] == 1) {
+        counts[col]++;
+    }
+
+    countHelper(arr, counts, row + 1, col);
+} */

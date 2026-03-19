@@ -15,13 +15,25 @@ public class Q10 {
 
 	Complete the method. You may use either iteration or recursion.
 	 */
-	public static int repeat (String text, int n) {
-		return 0; //fix me
+	public static String repeat (String text, int n) {
+		if (n == 0){
+			return "";
+		}
+		return text + repeat(text, n-1); //fix me
 	}
 
 	public static void main ( String[] args ) {
-		repeat("hi", 5);
-		repeat("bye", 3);
+		System.out.println(repeat("hi", 5));
+		System.out.println(repeat("bye", 3));
 	}
 
 }
+/*public static void repeat(String text, int n) {
+
+    if (n == 0){
+        return;
+    }
+
+    System.out.print(text);
+    repeat(text, n - 1);
+} */

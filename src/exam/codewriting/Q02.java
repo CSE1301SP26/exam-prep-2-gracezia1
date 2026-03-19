@@ -13,9 +13,15 @@ public class Q02 {
 	*
 	**/
 	public static void dashedLine(double x) {
-		
+		dashedLineHelper(x, 0.02);
 	}
-
+	public static void dashedLineHelper(double x, double space){
+		if (space>=1){
+			return;
+		}
+		StdDraw.line(x, 0 + space, x, 0.02+space);
+		dashedLineHelper(x, space + 0.04);
+	}
 	public static void main(String[] args) {
 		dashedLine(0.25);
 	}

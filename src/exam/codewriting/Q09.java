@@ -17,12 +17,15 @@ public class Q09 {
 	this problem if a loop is used at any point.
 	 */
 	public static int numDigits (int x) {
-		return 0; //fix me
+		if (x <1){
+			return 0;
+		}
+		return 1 + numDigits(x/10); //fix me
 	}
 
 	public static void main ( String[] args ) {
-		System.out.println((1234567));//should be 7
-		System.out.println((1000));//should be 4
+		System.out.println(numDigits(1234567));//should be 7
+		System.out.println(numDigits(1000));//should be 4
 	}
 
 }

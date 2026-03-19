@@ -21,9 +21,20 @@ public class Q11 {
 
 	 */
 	public static int sumEvens(int[] a) {
-		return 0; //fix me
+		int i = 0;
+		return sumEvensHelper(a, i); //fix me
 	}
-
+	public static int sumEvensHelper(int[] a, int i){
+		if (i >= a.length){
+			return 0;
+		}
+		if (a[i] % 2 ==0){
+			return a[i] + sumEvensHelper(a, i+1);
+		}
+		else{
+			return 0+sumEvensHelper(a, i+1);
+		}
+	}
 	public static void main ( String[] args ) {
 		int [] a = {3 , 4 , 6 , 2 , 3 , 4 , 9};
 		System.out.println(sumEvens(a)); //should be 16
